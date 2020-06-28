@@ -1,8 +1,9 @@
-FROM golang:1.11.10-alpine3.9 as builder
+FROM golang:1.14
 
-# installing git
-RUN apk update && apk upgrade && \
-    apk add --no-cache git
+ENV GO111MODULE=on
+ENV GOFLAGS=-mod=vendor
+ENV APP_USER app
+ENV APP_HOME /go/src/mockit
 
 # setting working directory
 WORKDIR /go/src/app
@@ -14,14 +15,6 @@ RUN go get github.com/valyala/fasthttp
 
 COPY / /go/src/app/
 RUN go build -o mockit
-
-FROM alpine:3.9
-
-WORKDIR /go/src/app
-COPY --from=builder /go/src/app/mockit /go/src/app/mockit
-
-COPY *.json /app/response/
-COPY *.xml /app/response/
 
 EXPOSE 8010
 
