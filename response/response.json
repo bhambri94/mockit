@@ -1,0 +1,7 @@
+{
+    "error": {
+        "code": "RECORD_NOT_FOUND",
+        "message": "No otp exists with the phone number 7650000006"
+    },
+    "data": {}
+}
