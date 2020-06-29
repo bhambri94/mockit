@@ -19,3 +19,11 @@ docker images
 docker run -it --rm -p 8010:8010 -v $PWD/src:/go/src/mockit mockit
 
 ```
+
+By default the apis are hosted at port 8010.
+
+To call apis by default (if hitting from local):
+
+curl -L -X POST 'http://localhost:8010/json'
+
+curl -L -X POST 'http://localhost:8010/xml'
