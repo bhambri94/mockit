@@ -1,10 +1,10 @@
 package main
 
 import (
-	"ShiftAlt/mockit/configs"
 	"fmt"
 	"io/ioutil"
 	"log"
+	"mockit/configs"
 	"os"
 	"time"
 
