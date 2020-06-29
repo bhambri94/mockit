@@ -1,4 +1,4 @@
-module ShiftAlt/mockit
+module github.com/bhambri94/mockit
 
 go 1.12
 

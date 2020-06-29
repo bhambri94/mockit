@@ -4,9 +4,10 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
-	"mockit/configs"
 	"os"
 	"time"
+
+	"github.com/bhambri94/mockit/configs"
 
 	"github.com/buaazp/fasthttprouter"
 	"github.com/valyala/fasthttp"
